@@ -8,6 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install git-core sudo build-essential cmake valgrind libcppunit-dev -y
+RUN apt-get install vim -y
 
 # Build Google Test
 RUN git clone https://github.com/google/googletest.git /usr/local/src/googletest
